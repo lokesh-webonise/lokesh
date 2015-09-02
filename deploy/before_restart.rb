@@ -2,7 +2,8 @@ file "/tmp/lokesh" do
 	action :create
 end
 
-template "#{current_release}/test.rb" do
+template "test.rb" do
   source "test.erb"
   cookbook "webonise_projects"
+  variables({:adapter => node['deploy']['app_name']})
 end
