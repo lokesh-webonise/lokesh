@@ -1,7 +1,7 @@
 FROM ubuntu
 MAINTAINER Lokesh Jawane "lokeshjawane@gmail.com"
  
-RUN apt-get update && apt-get install -y nginx-full && echo "\ndaemon off;" >> /etc/nginx/nginx.conf
+RUN apt-get update && apt-get install -y nginx-full vim && echo -e "\ndaemon off;" >> /etc/nginx/nginx.conf
  
 # Expose ports
 EXPOSE 80
