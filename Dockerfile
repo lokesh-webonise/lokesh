@@ -1,14 +1,11 @@
 FROM ubuntu
-MAINTAINER Lokesh Jawane "lokeshjawane@gmail.com"
- 
-RUN apt-get update && apt-get install -y nginx-full && echo -e "\ndaemon off;" >> /etc/nginx/nginx.conf
- 
-# Expose ports
+
+# Install Nginx.
+RUN apt-get update
+RUN apt-get install -y nginx
+
+RUN echo "daemon off;" >> /etc/nginx/nginx.conf
+
 EXPOSE 80
-EXPOSE 443
- 
-# Define working directory
-WORKDIR /etc/nginx
- 
-# Define default command
-CMD ["nginx"]
+
+CMD nginx
