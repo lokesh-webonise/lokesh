@@ -1,4 +1,4 @@
-WordPress - Web publishing software
+WooordPress - Web publishing software
 
 Copyright 2015 by the contributors
 
